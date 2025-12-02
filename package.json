@@ -1,20 +1,52 @@
 {
   "name": "penpot-mcp",
   "version": "1.0.0",
-  "description": "",
+  "description": "MCP server for Penpot design tool integration - enables LLMs to interact with Penpot projects via the Model Context Protocol",
+  "keywords": [
+    "penpot",
+    "mcp",
+    "model-context-protocol",
+    "design",
+    "ai",
+    "llm",
+    "design-system"
+  ],
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/oraios/penpot-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/oraios/penpot-mcp/issues"
+  },
+  "bin": {
+    "penpot-mcp": "./mcp-server/dist/cli.js"
+  },
   "scripts": {
     "install:all": "concurrently --names \"COMMON,MCP-SERVER,PLUGIN\" --prefix-colors \"green,cyan,magenta\" \"npm --prefix common install\" \"npm --prefix mcp-server install\" \"npm --prefix penpot-plugin install\"",
     "build:all": "concurrently --names \"COMMON,MCP-SERVER,PLUGIN\" --prefix-colors \"green,cyan,magenta\" --success first \"npm --prefix common install && npm --prefix common run build\" \"npm --prefix mcp-server run build\" \"npm --prefix penpot-plugin run build\"",
     "start:all": "concurrently --names \"MCP-SERVER,PLUGIN-SERVER\" --prefix-colors \"cyan,magenta\" --kill-others-on-fail \"npm --prefix mcp-server start\" \"npm --prefix penpot-plugin run dev\"",
     "bootstrap": "npm run install:all && npm run build:all && npm run start:all",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "prepublishOnly": "npm run build:all",
+    "postinstall": "npm run install:all"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/oraios/penpot-mcp.git"
   },
-  "private": true,
+  "files": [
+    "mcp-server/dist",
+    "mcp-server/src/static",
+    "penpot-plugin/dist",
+    "common/dist",
+    "toolkit",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "concurrently": "^8.2.2",
     "kill-port": "^2.0.1"

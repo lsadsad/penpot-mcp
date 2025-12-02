@@ -1,0 +1,46 @@
+# Development files
+.idea
+*.tsbuildinfo
+*.orig
+*.bak
+temp/
+
+# Source files (we ship dist/ only)
+mcp-server/src/**/*.ts
+penpot-plugin/src/**/*.ts
+common/src/**/*.ts
+
+# Keep static files needed at runtime
+!mcp-server/src/static
+
+# Build artifacts not needed
+node_modules/
+logs/
+*.log
+
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Documentation that's not needed in package
+resources/
+python-scripts/
+
+# Development configs
+.vscode/
+.editorconfig
+tsconfig*.json
+prettier.config.*
+.prettierrc*
+
+# Test files if any
+**/*.test.ts
+**/*.spec.ts
+__tests__/
+test/
+tests/

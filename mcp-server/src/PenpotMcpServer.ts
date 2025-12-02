@@ -11,6 +11,9 @@ import { PenpotApiInfoTool } from "./tools/PenpotApiInfoTool";
 import { ExportShapeTool } from "./tools/ExportShapeTool";
 import { ImportImageTool } from "./tools/ImportImageTool";
 import { CreateShapeFromCssTool } from "./tools/CreateShapeFromCssTool";
+import { ComponentLibraryManagerTool } from "./tools/ComponentLibraryManagerTool";
+import { DesignTokenManagerTool } from "./tools/DesignTokenManagerTool";
+import { ComponentInstanceMapperTool } from "./tools/ComponentInstanceMapperTool";
 import { ReplServer } from "./ReplServer";
 import { ApiDocs } from "./ApiDocs";
 
@@ -68,6 +71,9 @@ export class PenpotMcpServer {
             new ExportShapeTool(this),
             new ImportImageTool(this),
             new CreateShapeFromCssTool(this),
+            new ComponentLibraryManagerTool(this),
+            new DesignTokenManagerTool(this),
+            new ComponentInstanceMapperTool(this),
         ];
 
         for (const tool of toolInstances) {
