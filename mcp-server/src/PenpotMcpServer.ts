@@ -10,6 +10,7 @@ import { HighLevelOverviewTool } from "./tools/HighLevelOverviewTool";
 import { PenpotApiInfoTool } from "./tools/PenpotApiInfoTool";
 import { ExportShapeTool } from "./tools/ExportShapeTool";
 import { ImportImageTool } from "./tools/ImportImageTool";
+import { CreateShapeFromCssTool } from "./tools/CreateShapeFromCssTool";
 import { ReplServer } from "./ReplServer";
 import { ApiDocs } from "./ApiDocs";
 
@@ -66,6 +67,7 @@ export class PenpotMcpServer {
             new PenpotApiInfoTool(this, this.apiDocs),
             new ExportShapeTool(this),
             new ImportImageTool(this),
+            new CreateShapeFromCssTool(this),
         ];
 
         for (const tool of toolInstances) {
