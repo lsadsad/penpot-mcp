@@ -1,4 +1,4 @@
-# The Penpot MCP Server
+# Penpot's Official MCP Server
 
 This project enables LLMs to interact directly with Penpot design projects 
 using the model context protocol (MCP), building on Penpot's plugin API
