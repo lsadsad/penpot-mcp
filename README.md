@@ -7,7 +7,7 @@ Penpot integrates a LLM layer built on the Model Context Protocol (MCP) via Penp
 Penpot's MCP Server is unlike any other you've seen. You get design-to- design, code-to-design and design-code supercharged workflows.
 
 
-[![Penpot MCP video playlist](https://github.com/user-attachments/assets/204f1d99-ce51-41dd-a5dd-1ef739f8f089)](https://www.youtube.com/playlist?list=PLgcCPfOv5v55g_tSsHNKiAF9lqF1GrHsf)
+[![Penpot MCP video playlist](https://github.com/user-attachments/assets/204f1d99-ce51-41dd-a5dd-1ef739f8f089)](https://www.youtube.com/playlist?list=PLgcCPfOv5v57SKMuw1NmS0-lkAXevpn10)
 
 
 ## Architecture
