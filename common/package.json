@@ -13,8 +13,5 @@
   },
   "files": [
     "dist/**/*"
-  ],
-  "dependencies": {
-    "penpot-mcp": "file:.."
-  }
+  ]
 }
